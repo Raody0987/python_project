@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django</title>
+</head>
+<body>
+    <h3>Pets will be Listed here from the database</h3>
+    {% if pets %}
+    <ul>
+        {% for pet in pets %}
+            <li>Name: {{ pet.name }}</li>
+            <li>Gender: {{ pet.breed }}</li>
+            <li>Age: {{ pet.age }}</li>
+            <li>Description: {{ pet.description }}</li>
+        {% endfor %}
+    </ul>   
+    {% endif %}
+</body>
+</html>
